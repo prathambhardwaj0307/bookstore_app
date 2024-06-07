@@ -20,7 +20,7 @@ function Navbar() {
   );
   return (
     <>
-      <div className="ma-w-screen-2x1 container mx-auto fixed top-0 left-0 right-0 ">
+      <div className="max-w-screen-2x1 container mx-auto fixed top-0 left-0 right-0 ">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
             <div className="dropdown">
