@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 
 function Navbar() {
-  const [sticky,setsticky]=useState(false)
-  const nabItems = (
+  
+
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const navItems = (
     <>
       <li>
         <a>Home</a>
@@ -20,8 +36,14 @@ function Navbar() {
   );
   return (
     <>
-      <div className="max-w-screen-2x1 container mx-auto fixed top-0 left-0 right-0 ">
-        <div className="navbar bg-base-100">
+      <div
+        className={` max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-800 dark:text-white fixed top-0 left-0 right-0 z-50 ${
+          sticky
+            ? "sticky-navbar shadow-md bg-base-200 dark:bg-slate-700 dark:text-white duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+      >
+        <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
