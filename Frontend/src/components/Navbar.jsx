@@ -34,7 +34,7 @@ function Navbar() {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 ${
+        className={`fixed top-0 left-0 right-0 z-50 ${
           sticky
             ? "sticky-navbar shadow-md bg-base-200 duration-300 transition-all ease-in-out"
             : ""
