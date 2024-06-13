@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
+import Login from "./Login";
 
 function Navbar() {
   const [theme, setTheme] = useState(
@@ -149,6 +150,7 @@ function Navbar() {
               >
                 Login
               </a>
+              <Login/>
             </div>
           </div>
         </div>
