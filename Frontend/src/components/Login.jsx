@@ -8,7 +8,7 @@ function Login() {
           <div className="modal-box">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              <button className="btn btn-sm btn-circle outline-none btn-ghost absolute right-2 top-2">
                 ✕
               </button>
             </form>
@@ -30,6 +30,14 @@ function Login() {
                 placeholder="Enter Your password"
                 className="w-80 px-3 py-1 border rounded-md outline-none"
               ></input>
+            </div>
+            <div className="flex justify-around mt-4">
+              <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
+                Login
+              </button>
+              <p>
+                Not registered? <span className="underline text-blue-500 cursor-pointer">Signup</span>
+              </p>
             </div>
           </div>
         </dialog>
