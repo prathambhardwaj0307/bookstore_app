@@ -14,7 +14,7 @@ function Login() {
             </form>
             <h3 className="font-bold text-lg">Login</h3>
             <div className="mt-4 space-y-2">
-              <sapn>Email</sapn>
+              <span>Email</span>
               <br />
               <input
                 type="email"
@@ -23,7 +23,7 @@ function Login() {
               ></input>
               <br />
               <br />
-              <sapn>Password</sapn>
+              <span>Password</span>
               <br />
               <input
                 type="password"
